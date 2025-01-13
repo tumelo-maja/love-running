@@ -27,6 +27,10 @@ h3 {
     color: #252525;
 }
 
+.hidden-heading {
+    display: none;
+}
+
 /* Header */
 header {
     background-color: #ffffff;
@@ -134,8 +138,8 @@ main {
 
 
 /* set line-hegith and bottom margin, all divs descendents*/
-#benefits-physical > div,
-#benefits-mental > div {
+#benefits-physical>div,
+#benefits-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
@@ -178,7 +182,7 @@ hr {
 
 #times div {
     color: #fafafa;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0, 0, 0, .6);
     padding: 15px;
     text-align: center;
     /* This will not wrap on screens of less than 400px width. Each div will expand to fill the  available space on its row*/
@@ -251,20 +255,22 @@ hr {
     }
 
     /* Reasons section*/
-    #benefits-physical, #benefits-mental {
+    #benefits-physical,
+    #benefits-mental {
         display: flex;
         flex-direction: column;
         width: 100%;
-    } 
-
-    #benefits-physical > div, #benefits-mental > div {
-width: 75%;
     }
 
-    #benefits-mental > div {
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
+    }
+
+    #benefits-mental>div {
         text-align: end;
         align-self: flex-end;
-            }
+    }
 }
 
 /* Media query: Large devices (laptops and desktops, 992px and up) */
@@ -278,13 +284,14 @@ width: 75%;
 
 /* Media query: Larger devices (laptops and desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
+
     /* Reasons section */
     #benefits {
         display: flex;
         flex-direction: row;
     }
 
-    #benefits > div {
+    #benefits>div {
         flex: 1;
     }
 
@@ -296,11 +303,11 @@ width: 75%;
         order: 1;
     }
 
-    #benefits-mental > div {
+    #benefits-mental>div {
         align-self: flex-start;
     }
 
-    #benefits-physical > div {
+    #benefits-physical>div {
         align-self: flex-end;
     }
 }
